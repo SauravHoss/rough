@@ -50,11 +50,11 @@ public class SearchAlgorithms
 			}
 			else if(stuff[mid] > num)
 			{
-				l=mid;
+				l=mid+1;
 			}
 			else 
 			{
-				r=mid;
+				r=mid-1;
 			}	
 		}
 		return -1;
