@@ -43,18 +43,18 @@ public class SearchAlgorithms
 		int r = stuff.length-1;
 		while(l<=r) 
 		{
-			int mid = l+(r-l)/2;
-			if(stuff[mid] == num) 
-			{
-				return mid;
-			}
-			else if(stuff[mid] > num)
+			int mid = (l+r)/2;
+			if(stuff[mid] < num) 
 			{
 				l=mid+1;
 			}
-			else 
+			else if(stuff[mid] > num)
 			{
 				r=mid-1;
+			}
+			else 
+			{
+				return mid;
 			}	
 		}
 		return -1;
